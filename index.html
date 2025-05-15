@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Code | Transformamos ideas en código que Trasciende</title>
+    <link rel="stylesheet" href="lib/tailwind/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#EFEFEF]">
+    <!--header-->
+    <header class="flex justify-between items-center py-2 px-5">
+<div class="logo">
+        <img class="w-10" src="assets/img/quantum_logo.webp" alt="">
+    </div>
+    <button onclick="toggleMenu()" class="lg:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+    <nav class="navbar hidden lg:flex">
+        <ul class="flex [&>li>a]:px-5 [&>li>a]:py-1">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+        </ul>
+        <div class="btns [&>a]:px-10 [&>a]:py-2 [&>a]:rounded-md">
+            <a class="transition hover:bg-[#1E1E1E] hover:text-white" href="#">log-In</a>
+            <a class="bg-[#1E1E1E] text-white transition hover:bg-[#EFEFEF] hover:text-[#1E1E1E]" href="#">Contacto</a>
+        </div>
+    </nav>
+        <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.navbar');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex-col'); // Agregamos o quitamos flex-col
+            const ul = nav.querySelector('ul');
+            if (ul) {
+                ul.classList.toggle('flex'); // Aseguramos que ul sea flex por defecto en lg
+                ul.classList.toggle('flex-col'); // Apilamos los items del ul
+            }
+            const btnsContainer = nav.querySelector('.btns');
+            if (btnsContainer) {
+                btnsContainer.classList.toggle('flex'); // Aseguramos que btns sea flex por defecto en lg
+                btnsContainer.classList.toggle('flex-col'); // Apilamos los botones
+            }
+        }
+    </script>
+    </header>
+    <!--header end-->
+</body>
+</html>
